@@ -1,0 +1,4 @@
+
+{% capture locale %}{{ page.url | truncate: 3, "" | remove: "/" }}{% endcapture %}
+{% if locale == "" %}{% assign locale = "en" %}{% endif %}
+<p>captured locale:{{ locale }}</p>

@@ -1,0 +1,57 @@
+
+current: en
+
+lang_shortcuts: ['en', 'tw', 'cn', 'ja']
+
+lang_names:
+  en: English
+  tw: 中文(繁体)
+  cn: 中文(简体)
+  ja: 日本語
+
+lang_menu:
+  en: EN
+  tw: 繁体
+  cn: 简体
+  ja: 日本語
+
+
+en:
+  index: /
+  lang_code: en
+  lang_flag: /images/flags/usa_flag.png
+  site_title: International Koi Institute (IKI)
+  site_description: International Koi Institute, the expert-center for education, research and trade, based on the island of Taiwan. Official agent for Sakai Fishfarm of Japan.
+  site_logo: /images/IKI-logo-en-280x115-light-alpha.png
+  copyright1: Copyright © 2014 -
+  copyright2:  HuaJin Consulting Co Ltd. All rights reserved.
+
+cn:
+  index: /home-cn/
+  lang_flag: /images/flags/china_flag.png
+  lang_code: zh-CN
+  site_title: 华锦国际锦鲤研究学院(IKI)
+  site_description: 国际科伊研究所，教育，研究和贸易专家中心，基于台湾岛。 日本坂井鱼业的官方代理.
+  site_logo: /images/IKI-logo-cn-280x115-light-alpha.png
+  copyright1: Copyright © 2014 -
+  copyright2:  华锦国际锦鲤研究学院. All rights reserved.
+
+tw:
+  index: /home-tw/
+  lang_flag: /images/flags/taiwan_flag.png
+  lang_code: zh-TW
+  site_title: 華錦國際錦鯉研究學院(IKI)
+  site_description: 國際科伊研究所，教育，研究和貿易專家中心，基於台灣島。 日本坂井魚業的官方代理
+  site_logo: /images/IKI-logo-cn-280x115-light-alpha.png
+  copyright1: Copyright © 2014 -
+  copyright2:  華錦國際錦鯉研究學院. All rights reserved.
+
+ja:
+  index: /home-ja/
+  lang_flag: /images/flags/japan_flag.png
+  lang_code: ja
+  site_title: IKI 台灣
+  site_description: 國際科伊研究所，教育，研究和貿易專家中心，基於台灣島。 日本坂井魚業的官方代理
+  site_logo: /images/IKI-logo-cn-280x115-light-alpha.png
+  copyright1: Copyright © 2014 -
+  copyright2:  HuaJin Consulting Co Ltd. All rights reserved.

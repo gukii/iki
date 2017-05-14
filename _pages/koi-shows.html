@@ -1,0 +1,12 @@
+---
+layout: page
+title: Koi Shows
+permalink: /koi-shows/
+ref: koi-shows
+lang: en
+---
+{% for item in site.koi-shows %}
+	<div class="cookie">
+		<h2><a href="{{ item.url }}">{{ item.title }}</a></h2>
+	</div>
+{% endfor %}

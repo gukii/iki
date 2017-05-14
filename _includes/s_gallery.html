@@ -1,0 +1,39 @@
+
+{% if include.galleryclass %}
+  {% assign galleryclass = include.galleryclass %}
+{% else %}
+  {% assign galleryclass = 's_gallery' %}
+{% endif %}
+
+{% if include.galleryimageclass %}
+  {% assign galleryimageclass = include.galleryimageclass %}
+{% else %}
+  {% assign galleryimageclass = 's_galleryimage' %}
+{% endif %}
+
+
+{% assign valid_extensions = ".JPEG|.JPG|.jpg|.jpeg|.png|.PNG" | split: "|" %}
+
+
+<div class="{{galleryclass}}">
+	{% capture filepath %}/images/galleries/{{include.gallery}}{% endcapture %}
+	{% for static_file in site.static_files %}
+
+	    {% if static_file.path contains filepath %}
+
+          {% if valid_extensions contains static_file.extname %}
+
+            {% assign description = static_file.basename | replace: '-', ' ' %}
+            <div class="{{ galleryimageclass }}">
+              <a href="{{static_file.path}}" alt="{{description}}">
+                <img src="{{ static_file.path }}" alt="{{description}}">
+              </a>
+              <div class="desc">{{description}}</div>
+            </div>
+
+          {% endif %}
+
+  		{% endif %}
+	{% endfor %}
+
+</div>

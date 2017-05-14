@@ -1,0 +1,43 @@
+---
+layout: page
+---
+<div class="collection-item-full">
+  <h2>
+    {% if page.image-path %}
+      <img src="{{ page.image-path }}" alt="page.title" class="collection-list-thumb" />
+    {% endif %}
+    <!--{{ page.title }}-->
+  </h2>
+
+  <div class="blog-post spacing">
+    {{ content }}
+  </div>
+</div>
+
+<!--
+
+site.collection:{{site.collections}}<BR/>
+page.id:{{page.id}}<BR/>
+page.path:{{page.path}}<BR/>
+page.relative_path:{{page.relative_path}}<BR/>
+page.ref:{{page.ref}}<BR/>
+page.url:{{page.url}}<BR/>
+site.baseurl:{{site.baseurl}}<BR/>
+
+
+{% assign activeCollName = page.path | remove_first: "_" | split: "/" | first %}
+<p>activeCollName:{{activeCollName}}</p>
+
+{% assign activeColl = site.collections[0]} %}
+<h1>activeColl:{{ activeColl }}</h1>
+<h1>activeColl.docs.title:{{ activeColl.docs.title }}</h1>
+
+
+
+{% assign album = site.collections
+    | where_exp:"album", "album.relative_directory == page.relative_path"
+    | first %}
+
+-->
+
+{% include language_selector.html %}

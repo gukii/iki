@@ -1,0 +1,29 @@
+---
+layout: page
+---
+
+
+	{% assign coll=site.collections | where:"label", page.collection-id  %}
+
+	{% if coll %}
+		<!--<p> got active collection:{{coll[0].label}}</p>-->
+
+
+			{% assign items=coll[0].docs | where:"lang", page.lang  %}
+			{% for item in items %}
+				<div class="collection-item">
+
+					<h2><a href="{{ item.url }}">{{ item.title }}</a></h2>
+
+			    {% if item.image-path %}
+			      <img src="{{ item.image-path }}" alt="{{item.title}}" class="collection-list-thumb" />
+			    {% endif %}
+
+
+					{{ item.excerpt }}
+				</div>
+			{% endfor %}
+
+
+
+	{% endif %}

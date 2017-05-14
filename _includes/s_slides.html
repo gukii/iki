@@ -1,0 +1,43 @@
+
+
+<div class="{{ include.name }}"
+  data-slick='{
+  	"autoplay": true,
+  	"arrows": true ,
+  	"centerMode": true,
+    "variableHeight": false,
+  	"variableWidth": true,
+    "vertical": false,
+  	"swipe": true
+  }'
+>
+
+{% if include.slideclass %}
+  {% assign slideclass = include.slideclass %}
+{% else %}
+  {% assign slideclass = 'slickslide' %}
+{% endif %}
+
+{% assign valid_extensions = ".JPEG|.JPG|.jpg|.jpeg|.png|.PNG" | split: "|" %}
+
+<!-- if images are located in the /images/category/ref folder, then display them -->
+<!-- can t add trailing slash, .. why s that? maybe need to strip trailing spaces with     | rstrip  -->
+{% if page.slides %}
+	{% capture filepath %}/images/slides/{{include.slides}}{% endcapture %}
+	{% for static_file in site.static_files %}
+
+	    {% if static_file.path contains filepath %}
+
+          {% if valid_extensions contains static_file.extname %}
+            <div class="{{ slideclass }}">
+              <a href="{{static_file.path}}" alt="{{ static_file.basename | replace: '-', ' ' }}">
+                <img src="{{ static_file.path }}" alt="{{static_file.basename | replace: '-', ' '}}">
+              </a>
+            </div>
+          {% endif %}
+
+  		{% endif %}
+	{% endfor %}
+{% endif %}
+
+</div>

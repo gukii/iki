@@ -1,0 +1,16 @@
+
+
+<!--  kramdown is not working here, thus using more standard way..
+<div>
+  <h3>I'm HTML</h3>
+  <div markdown="1">
+I am *Markdown text*. Be sure not to indent me, else
+I'll be interpreted as a code block.
+  </div>
+</div>
+-->
+
+<br/>
+{% capture x %}
+  {% include content/side-column.md %}
+{% endcapture %}{{ x | markdownify }}

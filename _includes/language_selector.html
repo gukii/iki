@@ -1,0 +1,67 @@
+
+<!-- put that inside a proper css file.. -->
+<style type="text/css">
+
+  .en:lang(en), .tw:lang(tw), .cn:lang(cn), .ja:lang(ja){
+      font-weight: bold;
+  }
+</style>
+
+
+<!-- display all available translations of this article, based on its shared 'ref' yaml field -->
+<div class="text-right">
+
+  {% assign posts=site.posts | where:"ref", page.ref | sort: 'lang' %}
+  {% for post in posts %}
+    <!--
+      <a href="{{ post.url }}" class="{{ post.lang }}">
+          <img src="{{site.data.languages[page.lang].lang_flag }}" alt="{{site.data.languages.lang_names[page.lang] }}" />
+      </a>
+    -->
+      <a href="{{ post.url }}" class="{{ post.lang }}">
+        {{site.data.languages.lang_menu[page.lang] }}
+      </a>
+  {% endfor %}
+
+  
+
+  {% assign pages=site.pages | where:"ref", page.ref | sort: 'lang' %}
+  {% for page in pages %}
+    <!--
+      <a href="{{ page.url }}" class="{{ page.lang }}">
+          <img src="{{site.data.languages[page.lang].lang_flag }}" alt="{{site.data.languages.lang_names[page.lang] }}" />
+      </a>
+    -->
+      <a href="{{ page.url }}" class="{{ page.lang }}">
+        {{site.data.languages.lang_menu[page.lang] }}
+      </a>
+  {% endfor %}
+
+
+
+  <!-- pages inside collections are not found with the above two loops, doing this now... -->
+
+
+  <!-- find active collection -->
+  {% for coll in site.collections %}
+
+    <!-- not sure this will work with permalinks ... -->
+  	{% if page.relative_path contains coll.relative_directory %}
+
+  		<!-- <p> got active collection, with articles under coll.docs, and collection name as coll.label </p> -->
+      {% assign pages=coll.docs | where:"ref", page.ref | sort: 'lang' %}
+      {% for page in pages %}
+          <!--
+          <a href="{{ page.url }}" class="{{ page.lang }}">
+            <img src="{{site.data.languages[page.lang].lang_flag }}" alt="{{site.data.languages.lang_names[page.lang] }}" />
+          </a>
+        -->
+        <a href="{{ page.url }}" class="{{ page.lang }}">
+
+          {{site.data.languages.lang_menu[page.lang] }}
+        </a>
+      {% endfor %}
+
+  	{% endif %}
+  {% endfor %}
+</div>

@@ -1,0 +1,128 @@
+<header class="site-header" role="banner">
+
+
+
+<style type="text/css">
+
+    .active {
+        font-weight: bold;
+    }
+
+
+
+    .site-header {
+      background-image: url("/images/green-back-1300x200-2.jpg");
+    }
+
+
+    /* this way i don t have to add the '.img-fluid' class to markup content, and images never get outside the article bounderies, otherwise would need to add the class within markdown: {: .img-fluid } */
+    div.page-content img, p img {
+      max-width: 100%;
+      height: auto;
+      vertical-align: middle;
+    }
+
+
+
+
+</style>
+
+
+<!-- <nav class="navbar navbar-toggleable-md navbar-light bg-faded"> -->
+
+    <nav class="navbar navbar-toggleable-md">
+
+
+      <a class="navbar-brand" href="{{ site.baseurl }}{{ site.data.languages[page.lang].index }}">
+        <img src="{{ site.data.languages[page.lang].site_logo }}" />
+      </a>
+
+
+      <button class="navbar-toggler navbar-toggler-right navbar-light" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+
+      <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+        <ul class="navbar-nav mt-2 mt-md-0 mr-auto">
+
+          {% assign pages=site.pages | where:"lang", page.lang %}
+          {% for my_page in pages %}
+
+              {% unless site.data.menu.exclude_pages contains my_page.ref %}
+
+                <a class="nav-link" href="{{ my_page.url | prepend: site.baseurl }}">
+
+                  {% if page.url == (my_page.url | relative_url) %}
+                    <li class="nav-item active">
+                  {% else %}
+                    <li class="nav-item">
+                  {% endif %}
+
+                    {{ my_page.title | escape }}
+                  </li>
+                </a>
+
+              {% endunless %}
+
+          {% endfor %}
+
+        </ul>
+
+
+      </div>
+
+    </nav>
+
+
+
+
+
+
+
+
+
+
+
+<!--
+    <nav>
+      <div class="nav-wrapper">
+        <a class="brand-logo" href="{{ "/" | relative_url}}">{{ site.title | escape }}</a>
+
+
+        <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
+
+
+        <ul class="right hide-on-med-and-down">
+
+          {% for my_page in site.pages %}
+            {% if my_page.title %}
+            <li>
+                {% if page.url == (my_page.url | relative_url) %}
+                  <a class="active" href="{{ my_page.url | relative_url }}">{{ my_page.title | escape }}</a>
+                {% else %}
+                  <a href="{{ my_page.url | relative_url }}">{{ my_page.title | escape }}</a>
+                {% endif %}
+            </li>
+            {% endif %}
+          {% endfor %}
+
+        </ul>
+
+
+        <ul class="side-nav" id="mobile-demo">
+
+          {% for my_page in site.pages %}
+            {% if my_page.title %}
+            <li><a class="page-link" href="{{ my_page.url | relative_url }}">{{ my_page.title | escape }}</a></li>
+            {% endif %}
+          {% endfor %}
+
+        </ul>
+      </div>
+    </nav>
+-->
+
+
+
+</header>
