@@ -12,6 +12,8 @@ lang: en
 carousel: true
 
 slides: 2main-410x288
+slides-original: 2main-410x288-orig
+
 ---
 
 ![home-page-header-sakai-yy-tablet2-8](/images/main/home-page-header-sakai-yy-tablet2-8.jpg)

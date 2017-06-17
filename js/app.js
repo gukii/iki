@@ -20,6 +20,16 @@ $(".slider").slick();
 
 $(".headerslider").slick();
 
+
+/* initialize lightGallery, unfortunately it needs an id to do that, not a class.. */
+$("#headerslider").lightGallery({
+    selector:'.brandslide',
+    thumbnail:true,
+    animateThumb:true,
+    showThumbByDefault:true
+  });
+
+
 /* initialize the brand slider, the images in there are more horizontal.. */
 $(".brandslider").slick({
 
