@@ -5,7 +5,9 @@ permalink: /about/
 lang: en
 ---
 
+IKI is located within the Pingtung Agricultural Biotechnology Park:<br/><br/>
 
+**Address:**<br/>
 Huajin Consulting Co., Ltd.<br/>
 
 No.19, Yuanxi 2 Road,<br/>
@@ -15,6 +17,8 @@ Taiwan, R.O.C.<br/>
 
 Phone: +886 (0)8 762 4219<br/>
 Email: info@koi-institute.com<br/>
+<br/>
+Facebook: [IKI-Taiwan](https://www.facebook.com/pages/%E8%8F%AF%E9%8C%A6%E9%A1%A7%E5%95%8F%E8%82%A1%E4%BB%BD%E6%9C%89%E9%99%90%E5%85%AC%E5%8F%B8-IKI-Taiwan/1468046100132639)
 <br/>
 <br/>
 

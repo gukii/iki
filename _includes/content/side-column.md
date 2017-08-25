@@ -14,6 +14,9 @@ CEO Chung Yingying:<br/>
 COO Chung Yinghui:<br/>
 [info@koi-institute.com](mailto:info@koi-institute.com)
 
+Site Admin:<br/>
+[admin@koi-institute.com](mailto:admin@koi-institute.com)
+
 #### Notice:
 
 Please note that most courses are held in Mandarin Chinese. Some courses are available in English.

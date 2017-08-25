@@ -44,7 +44,7 @@ Certified businesses become part of the “chain of custody”, where all supply
 
 Health check involving blood tests and virology, ultra sound to determine the gender and state of eggs, use of X-ray to ensure Koi bones and bubble are without problem. The Koi get chipped and receive a IKI certificate in addition to the certificate of origin by the Koifarm (e.g. Sakai or Sing Chang).
 
-_Read more [here](http://koi-institute.com/koi-health-certification/)._
+_Read more [here](http://koi-institute.com/koi-health/koi-health/)._
 
 ### PARENT KOI TRADE
 
