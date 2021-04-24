@@ -37,15 +37,17 @@
       {% for static_file in site.static_files %}
 
           {% if static_file.path contains filepath %}
-
+            {% unless static_file.path contains originalpath %}
               {% if valid_extensions contains static_file.extname %}
+                
                 <div class="{{ slideclass }}" data-src="{{originalpath}}/{{static_file.name}}">
 
-                  <a href="{{static_file.path}}" alt="{{ static_file.basename | replace: '-', ' ' }}">
+                  <a href="{{originalpath}}/{{static_file.name}}" alt="{{ static_file.basename | replace: '-', ' ' }}">
                     <img src="{{ static_file.path }}" alt="{{static_file.basename | replace: '-', ' '}}">
                   </a>
                 </div>
               {% endif %}
+            {% endunless %}
 
           {% endif %}
       {% endfor %}
